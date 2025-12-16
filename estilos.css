@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;800&display=swap');
 
+/* =========================
+   RESET Y BASE
+========================= */
 * {
   margin: 0;
   padding: 0;
@@ -7,383 +10,173 @@
 }
 
 body {
+  min-height: 100vh;
   background-image: url(imagen-Copy.jpg);
   background-size: cover;
-  background-position: center center;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: 'Work Sans', sans-serif;
 }
 
+/* =========================
+   LINKS GENERALES
+========================= */
 a {
-  color: aliceblue;
-  text-decoration: dotted;
+  color: antiquewhite;
+  text-decoration: none;
 }
 
-.header {
-  position: fixed;
-  font-family: 'Nunito', sans-serif;
-  font-size: 20px;
-  background-color: #1b3039;
+/* =========================
+   PRESENTACIÓN (ÁLBUM)
+========================= */
+.presentacion {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 10vh;
-  padding: 5px 10%;
-  box-shadow: 22px 22px 22px black;
-
+  gap: 40px;
+  padding-top: 10vh;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
-.header .logo {
-  cursor: pointer;
-  order: 3;
-  margin-left: auto;
-}
-
-.header .logo img {
-  height: 45px;
-  width: auto;
-  transition: all 0.3s;
-}
-
-.header .logo img:hover {
-  transform: scale(1.2);
-}
-
-.header nav {
-  order: 1;
-}
-
-.header .nav-links {
-  list-style: none;
-}
-
-.header .nav-links li {
-  display: inline-block;
-  padding: 0 20px;
-}
-
-.header .nav-links li:nth-child(1) {
-  font-weight: bolder;
-  display: inline-block;
-  padding: 0 20px 0 0;
-}
-
-.header .nav-links li:hover,
-.overlay a:hover {
-  transform: scale(1.1);
-  transition: all 0.3s ease 0s;
-}
-
-.header .nav-links a {
-  font-size: 700;
-  color: #eceff1;
-}
-
-.header .nav-links li a:hover {
-  color: #ffbc0e;
-}
-
-.header .btn {
-  order: 2;
-}
-
-.menu {
-  display: none;
-}
-
-.header .btn button, 
-.header .menu button {
-  margin-left: 20px;
-  font-weight: 700;
-  color: #1b3039;
-  padding: 9px 25px;
-  background: #eceff1;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-}
-
-.header .btn button:hover,
-.header .menu button:hover {
-  background-color: #e2f1f8;
-  color: #ffbc0e;
-  transform: scale(1.1);
-}
-
-
-/* Pantalla de presentacion TAPA+Info */
 .presentacion h1 {
-  font-size: 2em;
-  margin-top: 10px;
-  margin-bottom: 10px;
   font-family: 'Rock Salt', cursive;
   font-weight: normal;
-  text-shadow: 1px 1px 1px black;
+  font-size: 2em;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px black;
 }
 
 .presentacion p {
   font-size: 1em;
-  margin-bottom: 5px;
-  text-shadow: 1px 1px 1px black;
+  text-shadow: 1px 1px 2px black;
 }
 
-
-/* TAPA */
+/* =========================
+   TAPA
+========================= */
 .tapa {
-  background-color: rgba(23, 22, 24, 0.3);
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border-radius: 4%;
   flex: 1;
-  order: 1;
+  min-height: 70vh;
+  padding: 70px 40px;
   background-image: url(imagen-Copy.jpg);
-  background-position: center;
   background-size: cover;
-  font-family: 'Rock Salt', cursive;
+  background-position: center;
+  border-radius: 20px;
   color: antiquewhite;
-  text-shadow: 2px 2px 2px black;
-  box-shadow: 32px 32px 32px black;
-}
-
-
-/* INFO */
-.info {
-  background: #0F2027;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  color: antiquewhite;
-  border-radius: 4%;
-  flex: 2;
-  order: 2;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-family: 'Castoro Titling', cursive;
-  line-height: 40px;
-  box-shadow: 32px 32px 32px black;
+  box-shadow: 20px 20px 40px rgba(0,0,0,0.7);
 }
 
+/* =========================
+   INFO / TRACKLIST
+========================= */
+.info {
+  flex: 2;
+  min-height: 70vh;
+  padding: 60px 50px;
+  border-radius: 20px;
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+  color: antiquewhite;
+  font-family: 'Castoro Titling', cursive;
+  box-shadow: 20px 20px 40px rgba(0,0,0,0.7);
+}
 
-/* AREA DE CONTACTO */
+.info h1 {
+  font-size: 1.6em;
+  margin-bottom: 30px;
+}
+
+.info a {
+  display: block;
+  padding: 6px 0;
+  font-size: 1.05em;
+  letter-spacing: 0.5px;
+  transition: all 0.25s ease;
+}
+
+.info a:hover {
+  color: #ffbc0e;
+  letter-spacing: 2px;
+}
+
+/* =========================
+   CONTACTO
+========================= */
 .contacto {
+  margin-top: 8vh;
   display: flex;
   justify-content: center;
-  align-content: center;
-  font-family: 'Castoro Titling', cursive;
-  text-shadow: 1px 1px 1px black;
-  line-height: 50px
+  align-items: center;
 }
 
 .contacto a {
-  opacity: 0%;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.contacto:hover a {
+  opacity: 0.4;
 }
 
 .formulario {
-  background: #0F2027;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* Chrome 10-25, Safari 5.1-6 */
+  width: 85vw;
+  max-width: 900px;
+  padding: 40px;
+  border-radius: 20px;
   background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  border-radius: 4%;
-  box-shadow: 32px 32px 32px black;
+  box-shadow: 20px 20px 40px rgba(0,0,0,0.7);
 }
 
 .formulario h2 {
   font-family: 'Castoro Titling', cursive;
   font-weight: normal;
+  margin-bottom: 20px;
 }
 
 .formulario form {
-  align-self: center;
-  padding: 20px;
-  color: white;
   display: grid;
   gap: 15px;
-  grid-template: auto / auto;
-  align-items: center;
-  box-sizing: border-box;
+  color: white;
 }
 
-.formulario form input,
-.formulario form textarea {
-  padding: 20px 10px;
-  box-sizing: border-box;
-  font-size: 18px;
-  border-radius: 5px;
-  border: none;
+.formulario input,
+.formulario textarea {
   width: 100%;
+  padding: 14px 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
 }
 
-.formulario form button[type="submit"] {
-  background-color: #67ca50;
+.formulario button[type="submit"] {
+  margin-top: 10px;
+  padding: 12px;
+  font-size: 1.2em;
   font-weight: bold;
-  font-size: 1.5em;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  background-color: #67ca50;
 }
 
-.navbar {
-  background: #0F2027;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-}
-
-.navbar-navms-auto {
-  grid-template-areas:
-    "Home Music Research";
-}
-
-/* Estilos para pantallas más grandes */
-@media (min-width: 601px) {
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 800px) {
   .presentacion {
-    display: flex;
-    flex-flow: row wrap;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding-top: 10vh;
-    height: 100vh;
+    flex-direction: column;
+    gap: 20px;
   }
 
-  .tapa {
-    padding: 70px;
-    margin: 35px;
-    height: 70vh;
-    box-shadow: 32px 32px 32px black;
-  }
-
+  .tapa,
   .info {
-    padding: 60px 30px 60px 30px;
-    margin: 35px;
-    height: 70vh;
-    box-shadow: 32px 32px 32px black;
+    min-height: auto;
+    padding: 30px 25px;
   }
 
-  .contacto {
-    margin-top: 5vh;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .formulario {
-    width: 85vw;
-    padding: 2.5vh 20px;
-  }
-}
-
-/* Estilos para dispositivos móviles */
-@media (max-width: 600px) {
-  .presentacion {
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    padding-top: 10vh;
-  }
-
-  .tapa {
-    width: 85vw;
-    margin-top: 2.5vw;
-    margin-bottom: 2.5vw;
-  }
-
-  .info {
-    width: 85vw;
-    margin-top: 2.5vw;
-    margin-bottom: 2.5vw;
-    padding: 15px 30px 15px 30px;
-  }
-
-  .contacto {
-    margin-top: 2.5vh;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .formulario {
-    width: 85vw;
-    padding: 2.5vh 20px;
-  }
-
-  .formulario form {
-    align-self: center;
-  }
-
-}
-
-@media screen and (max-width: 800px) {
-  .nav-links, .btn {
-    display: none;
-  }
-
-  .menu {
-    display: inherit;
-  }
-}
-
-/* Nav */
-
-.header a {
-  text-decoration: none;
-
-}
-
-.header .overlay {
-  height: 100%;
-  width: 0;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  background-color: rgba(33, 49, 63, .95);
-  overflow: hidden;
-  transition: all 0.3s ease 0;
-}
-
-.header .overlay .overlay-content {
-  display: flex;
-  height: 100%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.header .overlay a {
-  padding: 15px;
-  font-size: 36px;
-  display: block;
-  transition: all 0.3s ease 0;
-  font-weight: 700;
-  color: #eceff1;
-}
-
-.header .overlay a:hover,
-.header .overlay a:focus {
-  color: #ffbc0e;
-}
-
-.header .overlay .close {
-  position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 65px;
-}
-
-@media screen and (max-height:450px) {
-  .header .overlay a {
-    font-size: 20px;
-  }
-
-  .header .overlay .close{
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  .info a {
+    letter-spacing: 0.3px;
   }
 }
