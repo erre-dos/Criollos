@@ -141,7 +141,7 @@ a {
 .formulario form {
   display: grid;
   gap: 15px;
-  color: white;
+  color: antiquewhite;
 }
 
 .formulario input,
@@ -161,7 +161,8 @@ a {
   border-radius: 30px;
   border: none;
   cursor: pointer;
-  background-color: #67ca50;
+   color: #203A43;
+  background-color: antiquewhite;
 }
 
 /* =========================
